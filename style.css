@@ -518,6 +518,32 @@ p {
   white-space: nowrap;
 }
 
+/* ---- SOLD OUT STATE ----
+   To mark an item sold out, add the class "sold-out" to its menu-card div.
+   Example: <div class="menu-card sold-out" data-category="drinks">
+   Remove "sold-out" to make it available again. */
+
+.menu-card.sold-out {
+  opacity: 0.5;
+  pointer-events: none;       /* disables any clicks on the card */
+  position: relative;
+}
+
+.menu-card.sold-out::after {
+  content: "Sold Out";
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: var(--color-text);
+  padding: 6px 16px;
+  border-radius: 20px;
+}
+
 .menu-note {
   text-align: center;
   font-size: 0.82rem;
