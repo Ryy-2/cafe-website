@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pinary's Home Cafe</title>
+
+  <!-- Google Fonts: Cormorant Garamond for headings, Inter for body -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <!-- Simple sticky nav with logo and links -->
+  <nav class="nav" id="navbar">
+    <div class="nav-container">
+      <!-- CUSTOMISE: Change "Nook Café" to your cafe name -->
+      <a href="#home" class="nav-logo">Pinary's Home Cafe</a>
+
+      <!-- Hamburger icon for mobile (toggled by script.js) -->
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Desktop + mobile nav links -->
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"    class="nav-link">Home</a></li>
+        <li><a href="#about"   class="nav-link">About</a></li>
+        <li><a href="#menu"    class="nav-link">Menu</a></li>
+        <li><a href="#order"   class="nav-link">Order</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- ===================== HERO / HOME ===================== -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+
+      <!-- CUSTOMISE: Your cafe name -->
+      <p class="hero-eyebrow">Welcome to</p>
+      <h1 class="hero-title">Pinary's Home Cafe</h1>
+
+      <!-- CUSTOMISE: Your tagline -->
+      <p class="hero-tagline">
+        Handcrafted drinks &amp; homemade sweets,<br />
+        made with love — from our home to yours.
+      </p>
+
+      <!-- CTA button scrolls to menu -->
+      <a href="#menu" class="btn btn-primary">View Our Menu</a>
+    </div>
+
+    <!-- Subtle decorative element -->
+    <div class="hero-decoration" aria-hidden="true">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+    </div>
+  </section>
+
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section about" id="about">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">A little corner of calm</h2>
+      </div>
+
+      <div class="about-content">
+        <!-- Decorative image placeholder -->
+        <div class="about-image">
+          <!-- CUSTOMISE: Replace with a real <img> tag pointing to your photo -->
+          <div class="image-placeholder">
+            <span>☕</span>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <!-- CUSTOMISE: Edit this paragraph to tell your story -->
+          <p>
+            Pinary's Home Cafe is a small passion project born out of a love
+            for carefully made drinks and homemade sweets. Based in Sydney,
+            everything is prepared in small batches — never rushed, never
+            mass-produced.
+          </p>
+          <p>
+            From our matcha lattes and cold brews to our homemade Basque
+            cheesecake and Butterteok, each item is made with intention and
+            care. We believe the best things come from someone's kitchen —
+            and we want you to taste that difference.
+          </p>
+          <p>
+            Whether you're a regular or ordering for the first time,
+            we hope every bite and sip feels like a little moment for yourself.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== MENU ===================== -->
+  <section class="section menu" id="menu">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-label">What We Make</span>
+        <h2 class="section-title">Our Menu</h2>
+        <p class="section-subtitle">
+          Everything is made fresh and in small batches. Items may vary by day.
+        </p>
+      </div>
+
+      <!-- Category filter tabs -->
+      <div class="menu-tabs" role="tablist">
+        <button class="tab-btn active" data-category="all"    role="tab">All</button>
+        <button class="tab-btn"        data-category="drinks" role="tab">Drinks</button>
+        <button class="tab-btn"        data-category="sweets" role="tab">Sweets</button>
+      </div>
+
+      <!-- Menu grid — items are shown/hidden by script.js based on category -->
+      <div class="menu-grid" id="menuGrid">
+
+        <!-- ---- DRINKS ---- -->
+        <div class="menu-card" data-category="drinks">
+          <div class="menu-card-top">
+            <h3 class="item-name">Matcha Latte</h3>
+            <span class="item-price">$7.50</span>
+          </div>
+          <p class="item-desc">Ceremonial-grade matcha with steamed oat milk. Earthy, creamy, and calming. Hot or iced.</p>
+        </div>
+
+        <div class="menu-card" data-category="drinks">
+          <div class="menu-card-top">
+            <h3 class="item-name">Mont Blanc</h3>
+            <span class="item-price">$8.50</span>
+          </div>
+          <p class="item-desc">A rich chestnut latte with smooth oat milk and a hint of vanilla. Warming and indulgent.</p>
+        </div>
+
+        <div class="menu-card" data-category="drinks">
+          <div class="menu-card-top">
+            <h3 class="item-name">Cold Brew</h3>
+            <span class="item-price">$7.00</span>
+          </div>
+          <p class="item-desc">Steeped for 18 hours. Smooth, low-acid, and refreshing over ice.</p>
+        </div>
+
+        <div class="menu-card" data-category="drinks">
+          <div class="menu-card-top">
+            <h3 class="item-name">Iced Latte</h3>
+            <span class="item-price">$7.00</span>
+          </div>
+          <p class="item-desc">Espresso over ice with cold oat milk. Simple, clean, and easy to love.</p>
+        </div>
+
+        <div class="menu-card" data-category="drinks">
+          <div class="menu-card-top">
+            <h3 class="item-name">Coconut Matcha</h3>
+            <span class="item-price">$8.00</span>
+          </div>
+          <p class="item-desc">Ceremonial matcha blended with creamy coconut milk. Tropical, earthy, and refreshing.</p>
+        </div>
+
+        <!-- ---- SWEETS ---- -->
+        <div class="menu-card" data-category="sweets">
+          <div class="menu-card-top">
+            <h3 class="item-name">Basque Cheesecake</h3>
+            <span class="item-price">$8.50 / slice</span>
+          </div>
+          <p class="item-desc">Deeply caramelised on top, silky and custardy inside. Baked in small batches fresh each week.</p>
+        </div>
+
+        <!-- Butterteok — one card showing all three flavours -->
+        <div class="menu-card" data-category="sweets">
+          <div class="menu-card-top">
+            <h3 class="item-name">Butterteok</h3>
+            <span class="item-price">$6.50 each</span>
+          </div>
+          <p class="item-desc">Soft, buttery Korean-style cakes baked fresh. Available in three flavours:</p>
+          <ul class="item-flavours">
+            <li>Earl Grey Chocolate</li>
+            <li>Matcha</li>
+            <li>Original</li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- end .menu-grid -->
+
+      <p class="menu-note">
+        * Menu items may change seasonally. DM us to check availability.
+      </p>
+
+    </div>
+  </section>
+
+
+  <!-- ===================== ORDER / CONTACT ===================== -->
+  <section class="section order" id="order">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="section-title">Order &amp; Contact</h2>
+      </div>
+
+      <div class="order-grid">
+
+        <!-- How to Order -->
+        <div class="order-card">
+          <div class="order-icon">🛍️</div>
+          <h3>How to Order</h3>
+          <ol class="order-steps">
+            <!-- CUSTOMISE: Update these steps to match how you take orders -->
+            <li>Browse our menu above</li>
+            <li>Send us your order via WhatsApp or Instagram DM</li>
+            <li>We'll confirm your order and a pickup time</li>
+            <li>Pick up fresh from our door!</li>
+          </ol>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="order-card">
+          <div class="order-icon">📲</div>
+          <h3>Reach Us</h3>
+          <ul class="contact-list">
+            <!-- CUSTOMISE: Replace with your real contact details -->
+            <li>
+              <span class="contact-label">Instagram</span>
+              <a href="https://instagram.com/pinaryshomecafe" target="_blank" rel="noopener">@pinaryshomecafe</a>
+            </li>
+            <li>
+              <span class="contact-label">WhatsApp</span>
+              <!-- Replace 61400000000 with your Australian number (no spaces or dashes) -->
+              <a href="https://wa.me/61400000000" target="_blank" rel="noopener">+61 400 000 000</a>
+            </li>
+            <li>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+61400000000">+61 400 000 000</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Opening Hours & Pickup Info -->
+        <div class="order-card">
+          <div class="order-icon">🕐</div>
+          <h3>Hours &amp; Pickup</h3>
+          <!-- CUSTOMISE: Update days and times -->
+          <ul class="hours-list">
+            <li><span>Wednesday – Friday</span><span>10am – 5pm</span></li>
+            <li><span>Saturday</span><span>9am – 6pm</span></li>
+            <li><span>Sunday</span><span>10am – 3pm</span></li>
+            <li class="hours-closed"><span>Monday – Tuesday</span><span>Closed</span></li>
+          </ul>
+          <p class="pickup-note">
+            Pickup only — Sydney, Australia.<br />
+            Exact address shared upon order confirmation.
+          </p>
+        </div>
+
+      </div>
+      <!-- end .order-grid -->
+
+    </div>
+  </section>
+
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <!-- CUSTOMISE: Update name and year -->
+      <p class="footer-logo">Pinary's Home Cafe</p>
+      <p class="footer-copy">
+        Made with love from home &nbsp;·&nbsp;
+        <!-- Auto-updated by script.js -->
+        &copy; <span id="year"></span> Pinary's Home Cafe
+      </p>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
